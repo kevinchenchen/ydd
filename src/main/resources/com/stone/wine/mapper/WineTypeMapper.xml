@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stone.wine.mapper.WineTypeMapper">
+	<!-- 基本MAP类型 -->
+	<resultMap type="com.stone.wine.model.WineType" id="BaseWineTypeMap">
+		<id property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="title" column="title" />
+		<result property="img" column="img" />
+		<result property="description" column="description" />
+		<result property="remark" column="remark" />
+		<result property="addTime" column="addtime" />
+		<result property="flag" column="flag" />
+	</resultMap>
+
+	<resultMap type="com.stone.wine.model.WineType" id="InnerWineChildTypeMap"
+		extends="BaseWineTypeMap">
+		<collection property="childTypes" ofType="com.stone.wine.model.WineChildType">
+			<id property="id" column="ct_id" />
+			<result property="name" column="ct_name" />
+			<result property="typeId" column="ct_type_id" />
+			<result property="url" column="ct_url" />
+			<result property="addTime" column="ct_addtime" />
+			<result property="flag" column="ct_flag" />
+		</collection>
+	</resultMap>
+
+	<resultMap type="com.stone.wine.model.WineType" id="wineByTypeGroup"
+		extends="InnerWineChildTypeMap">
+		<collection property="wines" ofType="com.stone.wine.model.Wine">
+			<id property="id" column="w_id" />
+			<result property="name" column="w_name" />
+			<result property="cover" column="w_cover" />
+			<result property="pimg" column="w_pimg" />
+			<result property="price" column="w_price" />
+			<result property="discountPrice" column="w_discount_price" />
+			<result property="stock" column="w_stock" />
+			<result property="description" column="w_description" />
+			<result property="capacity" column="w_capacity" />
+			<result property="typeId" column="w_type_id" />
+			<result property="varieties" column="w_varieties" />
+			<result property="placeoforigin" column="w_placeoforigin" />
+			<result property="alcohol" column="w_alcohol" />
+			<result property="storageCondition" column="w_storage_condition" />
+			<result property="addtime" column="w_addtime" />
+			<result property="flag" column="w_flag" />
+			<result property="recommend" column="w_recommend" />
+			<result property="special" column="w_special" />
+		</collection>
+	</resultMap>
+
+
+	<sql id="BaseFieldSQL">
+		id,name,title,description,img,remark,addtime,flag
+	</sql>
+	<sql id="InnerChildTypeFieldSQL">
+		t.*,ct.id ct_id,ct.name ct_name,ct.url
+		ct_url,ct.type_id
+		ct_type_id,ct.addtime ct_addtime,ct.flag ct_flag
+	</sql>
+
+	<insert id="insertWineType">
+		insert into
+		wine_type(name,title,description,img,remark,addtime,flag)
+		values(#{name},#{title},#{description},#{img},#{remark},#{addTime},0)
+	</insert>
+	<delete id="deleteWineType">
+		delete from wine_type where id = #{id}
+	</delete>
+	<update id="updateWineType">
+		update wine_type
+		<set>
+			<if test="name!=null">name=#{name},</if>
+			<if test="title!=null">title=#{title},</if>
+			<if test="description!=null">description=#{description},</if>
+			<if test="img!=null">img=#{img},</if>
+		</set>
+		<where>id = #{id}</where>
+	</update>
+
+	<select id="findById" resultType="WineType">
+		select
+		<include refid="BaseFieldSQL"></include>
+		from wine_type
+		where id = #{id}
+	</select>
+
+	<select id="queryList" parameterType="WineType" resultMap="BaseWineTypeMap">
+		select
+		<include refid="BaseFieldSQL"></include>
+		from wine_type
+		<where>
+			<if test='name!=null || name!=""'>
+				and name like concat('%',name,'%')
+			</if>
+			<if test='name!=null || name!=""'>
+				and name like concat('%',name,'%')
+			</if>
+		</where>
+		order by addtime desc
+	</select>
+
+	<select id="queryByName" resultMap="BaseWineTypeMap">
+		select
+		<include refid="BaseFieldSQL"></include>
+		from wine_type
+		where name = #{name}
+	</select>
+
+	<select id="selectInnerChildType" resultMap="InnerWineChildTypeMap">
+		select
+		<include refid="InnerChildTypeFieldSQL"></include>
+		from wine_type t
+		left join wine_child_type ct
+		on t.id = ct.type_id
+	</select>
+
+	<select id="queryWineByTypeGroup" resultMap="wineByTypeGroup">
+		select t.*,ct.id
+		ct_id,ct.name ct_name,ct.url,w.id w_id,w.name w_name,w.cover
+		w_cover,w.pimg w_pimg,w.price w_price,w.discount_price
+		w_descount_price,w.stock w_stock,w.description
+		w_description,w.capacity w_capacity,w.type_id w_type_id,w.varieties
+		w_varieties,w.placeoforigin w_placeoforigin,w.alcohol
+		w_alcohol,w.storage_condition w_storage_condition,w.addtime
+		w_addtime,w.flag w_flag,w.recommend w_recommend,w.special w_special
+		from wine w left join wine_type t on w.type_id = t.id left join
+		wine_child_type ct on ct.type_id = t.id
+	</select>
+
+	<update id="updateWineTypeSort">
+		update wine_type set
+		sort=(
+		case
+		<foreach collection="sortObjs" item="sortObj" index="index">
+			when
+			id=#{sortObj.id} then #{sortObj.sort}
+		</foreach>
+		ELSE sort
+		end)
+	</update>
+
+</mapper>

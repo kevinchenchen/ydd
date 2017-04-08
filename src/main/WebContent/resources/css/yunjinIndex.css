@@ -1,0 +1,419 @@
+﻿/* userInfo */
+.userCon {
+	width: 100%;
+	height: 180px;
+	position: relative;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.imgBg {
+	width: 100%;
+	height: 134px;
+}
+
+.userWordsBg {
+	position: absolute;
+	left: 0;
+	bottom: 46px;
+	z-index: 3;
+	width: 100%;
+	height: 27px;
+	background-color: #000;
+	filter: alpha(opacity = 30);
+	-moz-opacity: 0.3;
+	opacity: 0.3;
+}
+
+.userWords {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 4;
+	width: 100%;
+	height: 86px;
+}
+
+.userWords h3 {
+	padding-left: 102px;
+	padding-top: 13px;
+	height: 27px;
+	line-height: 27px;
+	font-size: 16px;
+	font-weight: normal;
+	color: #FFF;
+	background-repeat: no-repeat;
+}
+
+.userWords p {
+	padding-left: 102px;
+	height: 30px;
+	line-height: 15px;
+	font-size: 12px;
+	color: #aaaaaa;
+	overflow: hidden;
+	padding-top: 6px;
+}
+
+.imgHeadBox {
+	border: 1px solid #FFF;
+	padding: 5px;
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	float: left;
+	margin: 0 10px;
+	filter: alpha(opacity = 50);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 5;
+}
+
+img.imgHead {
+	width: 70px;
+	height: 70px;
+	margin: 6px 16px;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 6;
+}
+
+.aUserCenter {
+	display: block;
+	width: 66px;
+	height: 46px;
+	margin: 40px 10px 0;
+	float: right;
+}
+
+.aUserCenter i {
+	display: block;
+	float: left;
+	width: 1px;
+	height: 24px;
+	background-color: #cccccc;
+	margin-top: 11px;
+}
+
+.aUserCenter span {
+	display: block;
+	float: right;
+	width: 65px;
+	height: 15px;
+	line-height: 15px;
+	font-size: 12px;
+	color: #999999;
+	text-align: center;
+	padding: 24px 0 7px;
+	background-image: url(../images/user_icon.png);
+	background-repeat: no-repeat;
+	background-position: center 8px;
+	background-size: 20px 18px;
+}
+
+.userCollect {
+	display: block;
+	padding-left: 18px;
+	padding-right: 8px;
+	height: 27px;
+	line-height: 25px;
+	font-size: 12px;
+	color: #FFF;
+	position: absolute;
+	right: 0;
+	bottom: 46px;
+	z-index: 5;
+	background-image: url(../images/collect.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 14px 14px;
+}
+
+.userCollect.on {
+	background-image: url(../images/collect_on.png);
+}
+
+.otherBox {
+	padding-left: 102px;
+	padding-top: 6px;
+}
+
+.otherBox .aOther {
+	display: block;
+	height: 24px;
+	line-height: 24px;
+	font-size: 13px;
+	color: #999;
+	float: left;
+}
+
+.otherBox i {
+	display: inline-block;
+	width: 1px;
+	height: 14px;
+	margin: 5px;
+	background-color: #989898;
+	float: left;
+}
+
+/*classify*/
+.classify {
+	padding: 10px 10px 0px;
+	color: #222;
+}
+
+.classify .bullets {
+	background-color: #5180ec;
+	display: inline-block;
+	height: 14px;
+	margin-right: 8px;
+	vertical-align: -1px;
+	width: 4px;
+}
+
+.classify .more {
+	display: block;
+	float: right;
+	font-size: 12px;
+	padding-right: 15px;
+	position: relative;
+	height: 20px;
+}
+
+.classify .more i {
+	background: url("../images/ico.png") no-repeat scroll -79px 0/180px auto
+		rgba(0, 0, 0, 0);
+	display: block;
+	float: right;
+	height: 20px;
+	position: absolute;
+	right: 0;
+	top: 2px;
+	width: 10px;
+}
+
+/* advert */
+.advert {
+	background-color: #FFF;
+	padding-left: 10px;
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+.advert00 {
+	width: 50%;
+	height: auto;
+	padding-right: 10px;
+	min-height: 220px;
+	float: left;
+	box-sizing: border-box;
+	float: left;
+}
+
+.imageWords {
+	display: block;
+	width: 100%;
+	height: auto;
+	position: relative;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.imageWords img {
+	width: 100%;
+	height: auto;
+}
+
+.wordConBg {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 3;
+	width: 100%;
+	height: 24px;
+	background-color: #FFF;
+	filter: alpha(opacity = 80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+}
+
+.title {
+	line-height: 24px;
+	font-size: 14px;
+	color: #000000;
+	margin: 0 6px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.subtitle {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: #666;
+	margin: 0 6px;
+	line-height: 20px;
+	font-size: 12px;
+}
+
+.price {
+	display: inline-block;
+	line-height: 24px;
+	font-size: 14px;
+	font-weight: normal;
+	color: #ff0000;
+	margin: 0 6px;
+}
+
+.stock {
+	display: inline-block;
+	line-height: 24px;
+	font-size: 10px;
+	font-weight: normal;
+	color: #666;
+	margin: 0 6px;
+}
+
+.wordCon {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 4;
+	width: 100%;
+	height: 24px;
+}
+
+.wordCon span {
+	display: block;
+	line-height: 24px;
+	font-size: 14px;
+	color: #000000;
+	margin: 0 6px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.wordCon span.subtitle {
+	color: #666;
+	font-size: 12px;
+}
+
+.wordCon strong {
+	display: block;
+	line-height: 24px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #ff0000;
+	margin: 0 6px;
+}
+
+.wordCon strong em {
+	font-style: normal;
+	font-size: 14px;
+}
+
+.advert01 {
+	width: 100%;
+	height: auto;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	float: left;
+	box-sizing: border-box;
+}
+
+.imageWord {
+	display: block;
+	width: 100%;
+	height: auto;
+	border: 1px solid #eeedec;
+	box-sizing: border-box;
+	background-color: #fffcf2;
+}
+
+.imageWord img {
+	width: 55%;
+	height: auto;
+	float: right;
+}
+
+.imageWord h3 {
+	line-height: 24px;
+	font-size: 20px;
+	color: #000000;
+	margin-left: 15px;
+	margin-top: 25px;
+}
+
+.imageWord p {
+	line-height: 20px;
+	font-size: 14px;
+	color: #bbbbbb;
+	margin-left: 15px;
+}
+
+.imageWord strong {
+	display: block;
+	line-height: 24px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #ff0000;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+
+.imageWord strong em {
+	font-style: normal;
+	font-size: 14px;
+}
+/* collectBox */
+.collectBox {
+	position: fixed;
+	display: none;
+	left: 0;
+	top: 0;
+	z-index: 99;
+	width: 100%;
+	height: 100%;
+}
+
+.collectBg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	filter: alpha(opacity = 80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+}
+
+.collectCon {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 103;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+}
+
+.collectBox.iPhone .collectCon {
+	background-image: url(../images/collect_iPhone.png);
+}
+
+.collectBox.Android .collectCon {
+	background-image: url(../images/collect_Android.png);
+}

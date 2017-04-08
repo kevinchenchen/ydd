@@ -1,0 +1,14 @@
+﻿/* divOrder */
+.divOrder{width:100%;padding-left:10px;box-sizing:border-box;background-color:#FFF;border-top:1px solid #EEE;border-bottom:1px solid #EEE;margin-bottom:10px;}
+.orderCon{padding:5px 10px 5px 0;border-bottom:1px solid #EEE;}
+.orderCon:last-child{border-bottom:0 none;}
+.orderID{float:left;line-height:30px;font-size:12px;color:#323232;}
+.aCancelOrder,.aCancelOrder:hover{float:right;line-height:30px;font-size:12px;color:#24A8F2;}
+.orderImg{width:95px;height:95px;float:left;margin:5px 10px 5px 0;}
+.orderSpanCon{display:block;float:right;margin:5px 0 5px 10px;}
+.orderSpanCon h2{line-height:20px;font-size:16px;font-weight:normal;color:#323232;text-align:right;}
+.orderSpanCon h3{line-height:20px;font-size:12px;font-weight:normal;color:#666;text-align:right;}
+.orderName{line-height:20px;font-size:14px;color:#323232;margin:5px 0;}
+.orderMoney{float:left;line-height:30px;font-size:16px;color:#323232;}
+.orderMoney span{color:#ee762e;}
+.aPayOrder,.aPayOrder:hover{float:right;display:block;width:60px;height:30px;line-height:30px;font-size:14px;border-radius:5px;background-color:#ee762e;color:#FFF;text-align:center;}

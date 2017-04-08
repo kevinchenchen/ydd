@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stone.wine.mapper.WineChildTypeMapper">
+	<!-- 基本MAP类型 -->
+	<resultMap type="com.stone.wine.model.WineChildType" id="BaseWineTypeMap">
+		<id property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="typeId" column="type_id" />
+		<result property="url" column="url" />
+		<result property="addTime" column="addtime" />
+		<result property="flag" column="flag" />
+	</resultMap>
+
+	<sql id="BaseFieldSQL">
+		id,name,type_id as typeId,url,addtime as addTime,flag
+	</sql>
+
+	<insert id="insertWineChildType">
+		insert into
+		wine_child_type(name,type_id,url,addtime,flag)
+		values(#{name},#{typeId},#{url},#{addTime},0)
+	</insert>
+
+	<delete id="deleteWineChildType">
+		delete from wine_child_type where id = #{id}
+	</delete>
+
+	<delete id="deleteWineChildTypeByTypeId">
+		delete from wine_child_type where type_id = #{typeId}
+	</delete>
+
+	<update id="updateWineChildType">
+		update wine_child_type set name = #{name} where
+		id=#{id}
+	</update>
+
+	<select id="queryAll" resultMap="BaseWineTypeMap">
+		select
+		<include refid="BaseFieldSQL" />
+		from wine_child_type;
+	</select>
+</mapper>

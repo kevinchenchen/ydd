@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>基于jQuery UI和Bootstrap的元素拖拽DEMO演示</title>
+<!-- 
+	参考：http://ifxoxo.com/jquery-ui-sortable.html
+ -->
+<!-- <link rel='stylesheet' -->
+<!-- 	href='http://codepen.io/assets/libs/fullpage/jquery-ui.css'> -->
+<link rel='stylesheet prefetch'
+	href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
+
+<link rel="stylesheet" href="css/style.css" media="screen"
+	type="text/css" />
+<style type="text/css">
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	font-size: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+.btn {
+	
+}
+
+/******/
+.parent_left {
+	width: 95%;
+	float: left;
+	cursor: pointer;
+}
+
+.pb_left p {
+	text-align: center;
+}
+
+.parent_right {
+	width: 5%;
+	float: right;
+	text-align: center;
+}
+
+.pb_left {
+	width: 30%;
+	float: left;
+}
+
+.pb_right {
+	width: 70%;
+	float: right;
+}
+
+.ad_title {
+	font-weight: bold;
+}
+</style>
+
+</head>
+
+<body>
+
+	<div class="container">
+		<h1>
+			Drag'n Drop Demo <small>jQuery UI and Bootstrap</small>
+		</h1>
+		<form role="form">
+			<div class="form-group">
+				<input class="form-control" type="text" name="name"
+					placeholder="Title" />
+			</div>
+			<details>
+				<div class="form-group">
+					<input class="form-control" type="text" name="blah"
+						placeholder="Additional details here" />
+				</div>
+			</details>
+		</form>
+
+		<div class="row">
+			<div class="col-sm-6">
+				<div id="modules">
+					<p class="drag">
+						<a class="btn btn-default">Text</a>
+					</p>
+
+					<p class="drag">
+						<a class="btn btn-default">Textarea</a>
+					</p>
+
+					<p class="drag">
+						<a class="btn btn-default">Number</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+				<div id="dropzone"></div>
+				<button class="btn btn-primary pull-right">Save</button>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div>
+		<button type="button" onclick="addParentMenu()">新增一级菜单</button>
+	</div>
+	<!-- 拖拽 -->
+	<div id="tuozhuai">
+		<div class="panel-group" id="accordion" role="tablist"
+			aria-multiselectable="true">
+
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingTwo">
+					<div class="panel-title clearfix">
+						<div class="parent_left" data-toggle="collapse"
+							data-parent="#accordion" href="#collapseTwo" aria-expanded="true"
+							aria-controls="collapseTwo">
+							<span class="glyphicon glyphicon-list"></span> <span>菜单名称2</span>
+						</div>
+						<div class="parent_right">
+							<span class="glyphicon glyphicon-plus"></span> <span
+								class="glyphicon glyphicon-trash"></span>
+						</div>
+					</div>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse in"
+					role="tabpanel" aria-labelledby="headingTwo">
+					<div class="panel-body">
+						<div class="pb_left">
+							<p class="ad_title">广告图片标题</p>
+							<p class="ad_desc">广告图片描述</p>
+							<p>
+								<img
+									src="http://ubmcmm.baidustatic.com/media/v1/0f000ckgT-d8UjUUgku-A0.gif" />
+							</p>
+						</div>
+						<div class="pb_right">
+							<span class="btn btn-default">111111111111</span> <span
+								class="btn btn-default">222222222222</span> <span
+								class="btn btn-default">333333333333</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--
+			  <div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingThree">
+					<h4 class="panel-title">
+						<a class="collapsed" role="button" data-toggle="collapse"
+							data-parent="#accordion" href="#collapseThree"
+							aria-expanded="false" aria-controls="collapseThree">
+							Collapsible Group Item #3 </a>
+					</h4>
+				</div>
+				<div id="collapseThree" class="panel-collapse collapse"
+					role="tabpanel" aria-labelledby="headingThree">
+					<div class="panel-body">
+						<button type="button" class="btn btn-default btn-lg">（大按钮）Large
+							button</button>
+						<button type="button" class="btn btn-default btn-lg">（大按钮）Large
+							button</button>
+					</div>
+				</div>
+			</div>-->
+		</div>
+	</div>
+
+	<script
+		src='http://codepen.io/assets/libs/fullpage/jquery_and_jqueryui.js'></script>
+	<script
+		src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
+
+	<script src="js/index.js"></script>
+	<div style="text-align: center; clear: both">
+		<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+		<script src="/follow.js" type="text/javascript"></script>
+	</div>
+</body>
+
+</html>

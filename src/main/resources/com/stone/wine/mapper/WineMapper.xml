@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stone.wine.mapper.WineMapper">
+	<resultMap type="com.stone.wine.model.Wine" id="BaseWineMap">
+		<id property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="cover" column="cover" />
+		<result property="pimg" column="pimg" />
+		<result property="price" column="price" />
+		<result property="discountPrice" column="discount_price" />
+		<result property="stock" column="stock" />
+		<result property="description" column="description" />
+		<result property="capacity" column="capacity" />
+		<result property="typeId" column="type_id" />
+		<result property="varieties" column="varieties" />
+		<result property="placeoforigin" column="placeoforigin" />
+		<result property="alcohol" column="alcohol" />
+		<result property="storageCondition" column="storage_condition" />
+		<result property="addtime" column="addtime" />
+		<result property="flag" column="flag" />
+		<result property="recommend" column="recommend" />
+		<result property="special" column="special" />
+		<result property="detail" column="detail" />
+	</resultMap>
+
+	<resultMap type="com.stone.wine.model.Wine" id="InnerWineTypeMap"
+		extends="BaseWineMap">
+		<association property="wineType" javaType="com.stone.wine.model.WineType">
+			<id property="id" column="t_id" />
+			<result property="name" column="t_name" />
+			<result property="title" column="t_title" />
+			<result property="description" column="t_description" />
+			<result property="remark" column="t_remark" />
+			<result property="addTime" column="t_addtime" />
+			<result property="flag" column="t_flag" />
+		</association>
+	</resultMap>
+
+	<select id="queryAll" resultMap="InnerWineTypeMap">
+		select w.*,t.id t_id,t.name t_name,t.title t_title,t.description
+		t_description,t.remark t_remark,t.addtime t_addtime,t.flag t_flag from
+		wine w left join wine_type t on w.type_id =t.id
+		<where>
+			<if test="null!=name">
+				and w.name like #{name}
+			</if>
+			<if test="null!=recommend">
+				and w.recommend = #{recommend}
+			</if>
+			<if test="null!=special">
+				and w.special = #{special}
+			</if>
+		</where>
+		order by w.addtime desc
+	</select>
+
+	<insert id="insertWine">
+		insert into
+		wine(name,cover,pimg,price,discount_price,stock,description,capacity,type_id,varieties,placeoforigin,alcohol,storage_condition,addtime,flag,recommend,special,detail)
+		values(#{name},#{cover},#{pimg},#{price},#{discountPrice},#{stock},#{description},#{capacity},#{typeId},#{varieties},#{placeoforigin},#{alcohol},#{storageCondition},
+		#{addtime},0,#{recommend},#{special},#{detail})
+	</insert>
+
+	<delete id="deleteWine">
+		delete from wine where id = #{id}
+	</delete>
+
+	<update id="updateWine">
+		update wine
+		<set>
+			<if test="name!=null">name=#{name},</if>
+			<if test="cover!=null">cover=#{cover},</if>
+			<if test="pimg!=null">pimg=#{pimg},</if>
+			<if test="price!=null">price=#{price},</if>
+			<if test="discountPrice!=null">discount_price=#{discountPrice},</if>
+			<if test="stock!=null">stock=#{stock},</if>
+			<if test="description!=null">description=#{description},</if>
+			<if test="capacity!=null">capacity=#{capacity},</if>
+			<if test="typeId!=null">type_id=#{typeId},</if>
+			<if test="varieties!=null">varieties=#{varieties},</if>
+			<if test="placeoforigin!=null">placeoforigin=#{placeoforigin},</if>
+			<if test="alcohol!=null">alcohol=#{alcohol},</if>
+			<if test="storageCondition!=null">storage_condition=#{storageCondition},</if>
+			<if test="detail!=null">detail=#{detail},</if>
+		</set>
+		where id = #{id}
+	</update>
+
+	<select id="findById" resultMap="BaseWineMap">
+		select * from wine where id =
+		#{id}
+	</select>
+
+	<update id="updateRecommend">
+		update wine set recommend = #{recommend} where id =
+		#{id}
+	</update>
+	<update id="updateSpecial">
+		update wine set special = #{special} where id = #{id}
+	</update>
+</mapper>

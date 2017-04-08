@@ -1,0 +1,117 @@
+﻿<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<title>红酒网上商城</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css"
+	href="./resources/css/public_wap.css" />
+<link rel="stylesheet" type="text/css"
+	href="./resources/css/common_wap.css" />
+<link rel="stylesheet" type="text/css" href="./resources/css/goods.css" />
+<link rel="stylesheet" type="text/css"
+	href="./resources/plugin/swiper/css/swiper.min.css" />
+<script type="text/javascript" src="./resources/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript"
+	src="./resources/plugin/swiper/js/swiper.min.js"></script>
+<style type="text/css">
+.swiper-container {
+	max-height: 640px;
+}
+</style>
+</head>
+<body>
+	<div class="mainBox">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="./resources/images/wine/wine_lg_1.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="./resources/images/wine/wine_lg_2.jpg" />
+				</div>
+			</div>
+			<!-- 如果需要分页器 -->
+			<div class="swiper-pagination"></div>
+			<!-- 如果需要滚动条 -->
+			<div class="swiper-scrollbar"></div>
+		</div>
+		<div class="cCon">
+			<p class="title">新露诗酒庄红葡萄酒 2010年 （法国波尔多中级庄）</p>
+			<p class="subtitle">2010 Chateau Lousteauneuf, Medoc, France</p>
+			<p>
+				<strong>￥599.00</strong><s>活动价：￥798.00</s>
+				<lable class="stock">库存：200</lable>
+			</p>
+		</div>
+		<div class="cCon clearfix" id="choseBox">
+			<div class="choseBox clearfix">
+				<span class="choseLei">数量</span> <span class="changeNumber">
+					<a class="lessen" href="javascript:void(0);" onclick="lessenFun()">-</a>
+					<a class="add" href="javascript:void(0);" onclick="addedFun()">+</a>
+					<input id="numValueInput" type="text" value="1" maxlength="5" />
+				</span>
+			</div>
+		</div>
+		<div class="cCon margin10">
+			<div class="desc">酒款详情</div>
+			<div class="lab">
+				<ul>
+					<li><label>类型：</label>红葡萄酒</li>
+					<li><label>容量：</label>750ml</li>
+					<li><label>酒精度：</label>14%</li>
+					<li><label>级别：</label>法国波尔多中级庄</li>
+					<li><label>适饮温度：</label>15-18℃</li>
+					<li><label>酒庄：</label>新露诗酒庄</li>
+					<li><label>葡萄品种：</label>赤霞珠、梅洛、品丽珠</li>
+				</ul>
+			</div>
+		</div>
+		<div class="cCon margin10">
+			<div class="desc">酒款综述</div>
+			<div class="lab">这款葡萄酒是法国波尔多梅多克中级酒庄——新露诗酒庄的正牌酒。该酒是由赤霞珠、品丽珠、梅洛和味而多四种葡萄混合调配而成。酒庄以质量为根本，发扬家族优良传统，良好的口碑得到国际认可。</div>
+		</div>
+		<div class="companyFooter">
+			<span>
+				<p>集智创新工作室</p>
+				<p>提供技术支持</p>
+			</span>
+		</div>
+	</div>
+	<div class="c_button clearfix">
+		<a class="seeGoods" href="">加入购物车</a> <a class="addGoods" href="">立即购买</a>
+	</div>
+	<a href="javascript:void(0);" class="goodCar"></a>
+	<script type="text/javascript" src="./resources/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="./resources/js/iscroll.js"></script>
+	<script type="text/javascript">
+		var numValue = 1;
+		function lessenFun() {
+			numValue--;
+			if (numValue <= 0) {
+				numValue = 1;
+			}
+			$("#numValueInput").val(numValue);
+		}
+		function addedFun() {
+			numValue++;
+			if (numValue > 200) {
+				numValue = 200;
+			}
+			$("#numValueInput").val(numValue);
+		}
+
+		var mySwiper = new Swiper('.swiper-container', {
+			direction : 'horizontal',
+			loop : true,
+
+			// 如果需要分页器
+			pagination : '.swiper-pagination',
+
+		// 如果需要滚动条
+		//scrollbar : '.swiper-scrollbar',
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿/* 移动端公用css */
+*{margin:0;padding:0}
+body{
+min-width:320px;max-width:640px;margin:0 auto;color:#666;background-color:#FFF;
+-webkit-text-size-adjust:none;		/* 禁用Webkit内核浏览器的文字大小调整功能 */
+font-size:16px;line-height:150%;font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;
+}
+a{text-decoration:none;}
+a:link{text-decoration:none;outline:none;}
+a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+a:active{text-decoration:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+ul,ol,li{list-style:none;}
+form{border:none;list-style:none;display:inline;}
+img{behavior:url("pngbehavior.htc");border:0;-ms-interpolation-mode:bicubic; vertical-align:middle;}
+table{border-collapse:collapse;border-spacing:0;}
+label{margin-bottom:5px; display:block;}
+label,input,button,select,textarea{font-size:100%;font-weight:normal;vertical-align:middle;outline:none;}
+input{outline:none;}	/* 去除输入框自带边框 */
+button,input[type="button"],input[type="reset"],input[type="submit"]{
+cursor:pointer;-webkit-appearance:none;-moz-appearance:none;-o-appearance:none;appearance:none;		/* 禁用设备自带的按钮 */
+}
+textarea{resize:none;}
+header, footer, article, section, nav, menu, hgroup {display: block;clear:all;}
+.clearfix:after {content:"."; display:block; height:0; font-size:0; clear:both; visibility:hidden;}
+.clearfix {display:inline-block;}   
+* html .clearfix {height:1%;}
+.clearfix {display:block;}
+.ellipsis{white-space:nowrap;text-overflow:ellipsis;overflow:hidden}	/* 超出文本以…展示 */
+.break {word-break:break-all;word-wrap:break-word;}	/* 超出文本自动换行 */

@@ -1,0 +1,53 @@
+﻿*{margin:0;padding:0}
+body{background-color:#F9F9F9;font-family:"Microsoft YaHei";}
+a{text-decoration:none;outline:none;}
+ul,li{list-style:none;vertical-align:top;}
+form{border:none;list-style:none;}
+img{behavior:url("pngbehavior.htc");border:0;-ms-interpolation-mode:bicubic;vertical-align:middle;}
+table{border-collapse:collapse; border-spacing:0}
+.left{float:left;}
+.right{float:right;}
+.center{text-align:center;}
+.clearfix:after {content:".";display:block;height:0;font-size:0;clear:both;visibility:hidden;}
+.clearfix {display:inline-block;}   
+* html .clearfix {height:1%;}
+.clearfix {display:block;}
+.ellipsis{white-space:nowrap;text-overflow:ellipsis;overflow:hidden}	/* 超出文本以…展示 */
+.break {word-break:break-all;word-wrap:break-word;}	/* 超出文本自动换行 */
+.borderBox{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}	/* 盒模型 */
+.inlineBlock{display:inline-block;zoom:1;position:relative;display:-moz-inline-stack;*display:inline;vertical-align:top;}	/* 兼容ie7的inline-block */
+/*=============================== wine-common ===============================*/
+/* 商城页头 */
+#shortcut{border-bottom:1px solid #EEEEEE;width:100%;background-color:#F7F7F7;line-height:30px;font-size:12px;font-family:"宋体";color:#666;}
+.w{margin:0 auto;width:1200px;height:30px;}
+.w a{color:#666;}
+.w a:hover{color:#E4393C;text-decoration:underline;}
+.fl{float:left;height:100%;}
+.fl .fore1{padding-right:11px;}
+.fl .fore1 .bx{display:inline-block;vertical-align:top;height:13px;width:16px;margin-top:8px;background:url(../images/star.png) no-repeat left center;}
+.fr{float:right;height:100%;}
+.fr .fore{float:left;padding-right:11px;}
+.fr .fore s{border-left:1px solid #DDDDDD;height:12px;padding-left:12px;top:9px;width:0;}
+.fr .fore span{color:#E4393C;}
+/* header */
+#header{width:100%;height:95px;background-color:#FFF;}
+#header .headDom{width:1200px;margin:0 auto;}
+#header img.logoImg{width:auto;height:65px;margin:15px 35px 15px 0;float:left;}
+#header .searchBox{padding-top:25px;width:430px;height:40px;float:left;margin-right:30px;}
+#header .searchBox input.searchInput{float:left;width:350px;height:40px;padding:7px;line-height:24px;font-size:14px;background-color:#FFF;border-top:1px solid #ff3c3c;border-left:1px solid #ff3c3c;border-bottom:1px solid #ff3c3c;border-right:0 none;-moz-border-radius:4px 0 0 4px;-webkit-border-radius:4px 0 0 4px;border-radius:4px 0 0 4px;}
+#header .searchBox a.aSearchBtn{display:block;float:right;width:80px;height:40px;background-image:url(../images/icon_search.png);background-repeat:no-repeat;background-position:center center;background-color:#ff3c3c;-moz-border-radius:0 4px 4px 0;-webkit-border-radius:0 4px 4px 0;border-radius:0 4px 4px 0;}
+#header .headerProtect{float:left;width:363px;height:43px;margin-top:23px;background-image:url(../images/headerProPic.jpg);background-repeat:no-repeat;background-position:center center;}
+#header .headerProtect a{display:inline-block;width:106px;height:43px;margin-left:15px;}
+/* 导航 */
+.contentDom{width:100%;height:34px;background-color:#990000;}
+.contenthead{width:1200px;height:34px;line-height:34px;font-size:14px;margin:0 auto;}
+.contenthead a.contentlist{display:block;float:left;padding:0 22px;height:34px;line-height:34px;text-align:center;color:#FFF;}
+.contenthead a.contentlist:hover{text-decoration:none;background-color:#B40c10;color:#FFF;}
+/* footer */
+#footer{width:100%;height:auto;margin:30px auto 0;padding:20px 0 30px;text-align:center;background-color:#FFF;}
+#footer p{height:25px;line-height:25px;font-size:14px;color:#333;padding:0 10px;}
+#footer p a{color:#333;}
+#footer p a:hover{color:#E60012;}
+#footer span.line{width:240px;height:50px;background-position:center center;background-repeat:no-repeat;}
+#footer span.lineL{background-image:url(../images/line-left.png);}
+#footer span.lineR{background-image:url(../images/line-right.png);}

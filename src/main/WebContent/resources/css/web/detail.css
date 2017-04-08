@@ -1,0 +1,77 @@
+﻿body{background-color:#FFF;}
+.contentDiv{width:1200px;margin:0 auto 10px;padding-top:20px;}
+/* 商品图片 */
+.mainImg{width:400px;float:left;}
+.imgDom{width:398px;height:398px;border:1px solid #ddd;}
+.imgDom img{width:100%;height:100%;}
+.img-list{margin-top:10px;width:100%;height:94px;}
+.img-list a.imgCtrl{display:block;float:left;width:84px;height:84px;padding:4px;border:1px solid #ddd;margin-right:8px;}
+.img-list a.imgCtrl img{width:100%;height:100%;}
+.img-list a.imgCtrl.on{border:1px solid #E60012;}
+.img-list a.imgCtrl:last-child{margin-right:0;}
+	/* 商品放大镜功能 */
+#magnifier{width:100%;height:100%;}
+#Browser{background-color:#FFF;border:1px solid #ddd;position:absolute;}
+#mag{position:absolute;z-index:15;width:100%;height:100%;border:1px solid #DDD;overflow:hidden;}
+/* 商品描述 */
+.mainWord{width:520px;height:385px;padding-top:15px;margin-left:20px;float:left;}
+.mainWord h2{width:100%;height:24px;line-height:24px;font-size:16px;color:#666;margin-bottom:10px;}
+.mainWord p{width:100%;height:20px;line-height:20px;font-size:14px;color:#e3393c;margin-bottom:10px;}
+.priceDom{height:61px;padding:5px 8px;background:url(../images/priceBg.png) no-repeat left top;margin-bottom:10px;}
+.priceDom .p1{width:100%;height:21px;line-height:21px;font-size:12px;color:#666;}
+.priceDom .p1 span{display:inline-block;line-height:21px;font-size:14px;color:#333;margin-left:38px;}
+.priceDom .p2{width:100%;height:36px;line-height:36px;font-size:12px;color:#666;padding-top:4px;}
+.priceDom .p2 span{display:inline-block;line-height:21px;font-size:18px;color:#c40000;margin-left:26px;}
+.priceDom .p2 span strong{line-height:21px;font-size:30px;color:#c40000;}
+.tip{line-height:24px;font-size:12px;color:#666;margin-bottom:30px;}
+.tip span{color:#F00;}
+.tip em{color:#06c;font-style:normal;}
+.choseBox{width:76px;height:46px;position:relative;z-index:3;border:1px solid #ccc;float:left;margin-right:10px;}
+.choseBox input#numValueInput{width:46px;height:46px;line-height:46px;font-size:18px;font-weight:bold;text-align:center;color:#333;overflow:hidden;background-color:FFF;border:0 none;}
+.choseBox a{display:block;width:23px;height:23px;line-height:23px;font-size:18px;text-align:center;color:#333;background-color:#F1F1F1;border:1px solid #ccc;position:absolute;right:-1px;}
+.choseBox a.lessen{bottom:-1px;}
+.choseBox a.add{top:-1px;}
+.mainWord a.aBtn{display:block;float:left;width:138px;height:48px;line-height:48px;font-size:16px;text-align:center;color:#FFF;border-radius:2px;margin-right:10px;}
+.mainWord a.aBtn00{background-color:#FC3A29;}
+.mainWord a.aBtn01{background-color:#c40000;}
+/* 左侧相关商品 */
+.leftDom{width:210px;float:left;}
+.modlue{border:1px solid #ddd;margin-bottom:10px;}
+.modlue h2{padding:0 6px;height:28px;line-height:28px;font-size:12px;font-weight:normal;color:#666;background-color:#f7f7f7;border-bottom:1px solid #ddd;}
+.modlue h3{padding:0 6px;height:28px;line-height:28px;font-size:12px;color:#666;background-color:#f7f7f7;border-bottom:1px solid #ddd;}
+.modlueBody{padding:8px 6px;}
+.modlueBody a.class-name{display:block;float:left;height:24px;line-height:24px;font-size:12px;color:#666;width:98px;}
+.modlueBody a.brand-name{display:block;float:left;height:24px;line-height:24px;font-size:12px;color:#666;width:65px;}
+ul.modlueBody{padding:0 8px;}
+.goods-list{padding:8px 0;border-bottom:1px solid #ddd;}
+.goods-list:last-child{border-bottom:0 none;}
+.goods-list a.img-name{display:block;width:160px;height:160px;margin:0 auto 5px;}
+.goods-list a.word-name{display:block;line-height:18px;font-size:12px;color:#666;margin-bottom:5px;}
+.modlueBody a:hover{color:#E60012;text-decoration:underline;}
+.goods-list p.price-name{line-height:18px;font-size:12px;text-align:center;color:#e4393c;}
+/* 右侧商品信息 */
+.mainCon{width:980px;float:right;padding-bottom:10px;position:relative;}
+.contationHead{border-color:#e60012 #e8e8e8 #e8e8e8 #e60012;border-style:solid solid none;border-width:1px 1px 0;}
+.contationHead h2{font-size:16px;font-weight:normal;height:29px;line-height:28px;text-align:center;width:99px;color:#FFF;background-color:#e60012;}
+.contationBody{padding:9px 19px 19px;border-color:#e8e8e8;border-style:solid;border-width:0 1px 1px;}
+.contationBody h3{line-height:24px;font-size:14px;font-weight:normal;color:#333;}
+.parameterBox,.labBox{padding-bottom:10px;}
+.parameterBox p{float:left;width:300px;margin-right:10px;line-height:20px;font-size:12px;color:#666;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.labBox p{line-height:20px;font-size:12px;color:#666;}
+.contationBody img{max-width:100%;margin:0 auto;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
